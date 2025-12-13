@@ -1,0 +1,1 @@
+// - print a pattern - full triangle (top + bottom) -> facing right

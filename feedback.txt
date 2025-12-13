@@ -1,0 +1,118 @@
+Queue based notification system
+
+Context:
+We will be building a proof of concept (POC) for a notification system (toasters) in React. The toasters need to be displayed one after another, with each toaster remaining visible for 2 seconds before the next one appears.
+
+Requirements:
+Toaster Queue: Implement a system to queue toasters and ensure they render sequentially.
+Rendering Duration: Each toaster should be visible for exactly 2 seconds before the next one is shown.
+Interactive Controls: Provide buttons to increment and decrement the number of toasters in the queue, by default there would be 4 toasters lined-up in the queue.
+
+Bonus Questions
+Add a progress bar to the Toaster component to visually indicate the remaining display time.
+
+import { useEffect, useRef, useState } from "react";
+
+// context
+const Toaster = ({ children }) => {
+    const [activeToaster, setActiveToaster] = useState({});
+    const [queue, setQueue] = useState([]);
+    const [tick, setTick] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setQueue((prev) => {
+                if (!prev || !prev.length) {
+                    clearTimeout(interval);
+                    setActiveToaster({});
+                    setQueue([]);
+                    return;
+                }
+                const copy = JSON.parse(JSON.stringify(prev));
+                const next = copy.shift();
+                setActiveToaster(next || {});
+
+                return copy;
+            });
+        }, 2000);
+    }, [tick]);
+
+    const addToQueue = (obj) => {
+        setQueue((prev) => {
+            const queueCopy = JSON.parse(JSON.stringify(prev));
+            obj.id = queueCopy.length + 2;
+            queueCopy.push(obj);
+            return queueCopy;
+        });
+    };
+
+    const appendToast = () => {
+        const obj = {
+            id: null,
+            heading: 'Toast heading',
+            description: 'This is a toast description',
+        };
+
+
+        if (!Object.keys(activeToaster).length) {
+            obj.id = queue.length + 1;
+            setActiveToaster(obj);
+            setTick(prev => ++prev);
+        } else {
+            addToQueue(obj);
+        }
+    };
+
+    return (
+        <div>
+            <button type="button" onClick={() => appendToast()}>Add TOAST</button>
+            <div className="toastWrapper">
+                {
+                    !!Object.keys(activeToaster).length && (
+                        <div style={{ border: '1px solid black' }} key={`${activeToaster.id}`}>
+                            <h3>{activeToaster.id} &nbsp; {activeToaster.heading}</h3>
+                            <p>{activeToaster.description}</p>
+                        </div>
+                    )
+                }
+            </div>
+            {children}
+        </div>
+    );
+};
+
+export default Toaster;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- create agent
+ - get the agent id
+
+
+
+
+get the agent details
+  - user id
+  - agent id
+
+
+list inbound agents
+ - user id
+
+
+delete inbound agent
+
+
+

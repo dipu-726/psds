@@ -1,0 +1,159 @@
+Set 1: Challenging Frontend Problem Solving
+
+Concurrent Editable Sections
+Prevent two users from editing the same document section simultaneously with a locking system that expires after inactivity.
+
+Dependency-Ordered Task Execution
+Given async tasks with dependencies, execute them in correct order with parallelism where possible.
+
+Session Expiry Timer with UI Feedback
+Display a countdown before session expiry with an option to extend; auto logout on expiry.
+
+Large JSON Viewer with Collapse/Expand
+Efficiently render deeply nested JSON with expandable/collapsible nodes, avoiding browser crash.
+
+Directory Tree Renderer
+Recursively render a file system tree with collapsible folders and highlight selected files.
+
+Timeline Slider with Snap Points
+Media timeline slider that snaps to markers with keyboard accessibility and smooth dragging.
+
+Floating Point Calculation Display
+Calculator/form input that handles floating point precision correctly to avoid rounding errors.
+
+Simulate Request Queue for Offline Mode
+Cache user actions offline and replay in order once online with UI progress.
+
+Dynamic Widget Layout Editor (Drag & Drop)
+Dashboard editor allowing drag, resize, and delete of widgets with snap-to-grid and state saving.
+
+Scroll-Triggered Lazy Component Loader
+Load components only when they enter viewport using IntersectionObserver or polyfill with smooth animations.
+
+Set 2: Tough Frontend Challenges
+
+Concurrent API Call Deduplication
+Deduplicate in-flight API calls and share results among multiple consumers.
+
+Real-Time Design Tool Canvas (Figma-like)
+Collaborative canvas engine supporting shapes, interactions, snap-to-grid, and multi-user sync.
+
+useStaggeredQueue() Hook for Ordered UI Animations
+Custom React hook queues animation triggers and fires them sequentially with delay.
+
+Multiplayer Cursor Synchronization Engine
+Sync multiple user cursors with interpolation and color-coded labels over WebSocket.
+
+Simulate requestIdleCallback() in Unsupported Browsers
+Polyfill requestIdleCallback using setTimeout and performance.now with cancellation.
+
+Dynamic Worker Pool
+Browser job manager using Web Workers with queueing and max concurrency.
+
+Dependency Graph Visualizer
+Render dependency graphs with force-directed layout, pan, and zoom using canvas or SVG.
+
+Build Your Own Reactivity System (Vue-like)
+Implement reactive state tracking and watchers using Proxy and dependency collection.
+
+Suspense-Aware Data Cache
+React-compatible cache that suspends during async fetch and resumes rendering once data arrives.
+
+Type-Aware Dynamic Form Engine (With Validation)
+Render forms from schema with nested fields, auto-validation, and error display.
+
+Set 3: Very Tough Frontend Problems
+
+High-Frequency Event Pipeline
+Process 1000+ events per second with deduplication, rate limiting, and batching.
+
+DOM Mutation Observer Diff Viewer
+Visualize DOM changes live using MutationObserver, grouping changes by parent nodes.
+
+Hierarchical Undo/Redo Engine
+Undo/redo system supporting grouped and nested actions with UI history display.
+
+Task Orchestration DSL in JS
+Execute tasks defined with .then() and .parallel() syntax supporting retries.
+
+Realtime Suggest-as-You-Type Search with Token Highlighting
+Fetch and highlight matching tokens in search suggestions with keyboard navigation.
+
+Dynamic Grid System (Responsive + Draggable)
+Grid layout system supporting drag, resize, snapping, and responsiveness.
+
+Optimistic UI + Conflict Resolution System
+Comment system with optimistic rendering, rollback on failure, and multi-tab last-write wins.
+
+Multi-Step Wizard State Machine
+Multi-step form with conditional skipping, navigation history, and validation per step.
+
+Your Own URL Router (SPA)
+Vanilla JS router supporting pushState, dynamic routes, and route guards.
+
+Adaptive UI Layout Based on Device Characteristics
+Dashboard layout adapting to screen size, orientation, and input type (touch/mouse).
+
+Set 4: Extremely Tough Frontend Challenges
+
+Write Your Own Scheduler (like React’s fiber)
+Cooperative scheduler splitting large work into chunks, yielding control with idle callbacks.
+
+File Upload Queue with Pause/Resume/Retry
+Upload multiple files with per-file progress, pause/resume, and retry with backoff.
+
+Multi-Tab State Consistency Engine
+Sync auth state and notifications across tabs using BroadcastChannel or localStorage events.
+
+Render Massive 2D Grid (10000x10000 cells)
+Virtualized scrollable grid rendering only visible cells with mouse-over highlight.
+
+Deep Compare with Cycle Detection
+Deep equality check that handles cycles without crashing.
+
+Video Timeline + Thumbnail Scrubber
+Slider that shows thumbnails on hover, debounced fetch, and prefetch adjacent thumbnails.
+
+Lightweight Front-End Pub/Sub System
+Custom event bus with wildcard subscriptions and async event bubbling.
+
+Real-Time Markdown Previewer with Line Mapping
+Markdown editor syncing scroll between editor and preview with section highlighting.
+
+Idle-Time Batch Processor
+Runs queued jobs only during browser idle time without blocking user interaction.
+
+Basic Chrome DevTools-like Inspect Tool
+Highlight hovered elements, show computed styles, and allow live CSS edits (non-persistent).
+
+Set 5: Ultra Tough Frontend Engineering Problems
+
+Write Your Own Scheduler (React Fiber Style)
+Cooperative scheduler yielding with requestIdleCallback or setTimeout prioritizing urgent tasks.
+
+File Upload Queue with Pause/Resume/Retry
+Manage concurrent uploads with progress UI and retry with exponential backoff.
+
+Multi-Tab State Sync (Auth + Notifications)
+Broadcast auth changes, logout, and notifications across tabs.
+
+Massive Virtualized Grid Renderer
+Render a 10,000 by 10,000 cell grid with virtualization, snapping, and highlighting.
+
+Deep Compare with Circular Reference Handling
+Robust deepEqual with cycle detection.
+
+Video Thumbnail Timeline with Prefetching
+Smooth slider fetching video thumbnails, prefetching near timestamps.
+
+Custom Frontend Pub/Sub with Wildcards and Async
+Event bus with subscription patterns and async event processing.
+
+Real-Time Markdown Preview with Scroll Sync
+Editor + preview syncing scroll and highlighting.
+
+Idle-Time Job Runner
+Process jobs only during idle periods, preventing main thread blocking.
+
+Element Inspector Tool
+Hover to highlight DOM nodes, show computed styles, allow live CSS tweaks.

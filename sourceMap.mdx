@@ -1,0 +1,1908 @@
+- write your sentry
+- write interceptors for requests
+
+
+
+Resume
+ - server driven UI
+ - yarn workspaces / nvm workspaces
+ - above the fold styles/content
+ - below the fold styles/content
+ - web core vitals
+ - localization
+ - google timer
+ - undo/redo
+ - desing communication
+ 	- design mail
+ 		- what package we do use ?
+ 		- desing text
+ - service worker for background processes
+ - cache eviction in service worker
+ - hydration
+ - rortate an array
+ - 2 sum
+ - 3 sum
+ - rate limiter
+ - deram 11 > ram 2mb questions
+
+Theory
+- React fiber
+- progressive rendering
+- web accessibility
+- concurrent react
+- server componets
+- server side rendering
+- hydration
+- island architecture
+- critical rendering path
+- reflow vs repaint
+
+- defer
+- async
+
+
+
+1. flat object
+2. flat object deepley
+3. flat object with depth
+4. prototypes and proto
+
+
+React fiber
+progressive rendering
+
+implement polyfills
+	
+	- modal orcehstrator
+ 	 useEffect
+	 useMemo
+	 useCallback
+	 useState
+
+	Function
+	 - call
+	 - bind
+	 - apply
+
+	 debounce
+	 throttle
+	 promisify
+	 cancellable timeout
+	 merge with deplays
+
+	 useEffect
+	 useMemo
+	 useCallback
+	 useState
+
+
+ - arrays
+ - Array.prototype.forEach ✅
+ - Array.prototype.map ✅
+ - Array.prototype.filter ✅
+ - Array.prototype.reduce ✅
+ - Array.prototype.find ✅
+ - Array.prototype.findIndex ✅
+ - Array.prototype.includes ✅
+ - Array.prototype.every
+ - Array.prototype.some ✅
+ - Array.prototype.fill
+ - Array.prototype.flat
+ - Array.prototype.flatMap
+ - Array.from
+ - Array.isArray
+
+Promises
+ - promises - methods
+ 	- Promise.all(), Promise.all()? How does it behave with resolved and rejected Promises? ✅
+	- romise.allSettled(), How is Promise.allSettled() different from Promise.all()? ✅
+    - Promise.race(), What does Promise.race() do? Give an example use case. ✅
+    - Promise.any(), Explain Promise.any(). How is it different from Promise.race()? ✅
+	- Promise.resolve(), How does Promise.resolve() work? When would you use it? ✅
+	- Promise.reject(), What is Promise.reject() and how is it used? ✅
+
+	- Write a promisify function converting a callback-style function into a Promise-based one. ✅
+    - Implement retry logic for a Promise-based async function (retry N times with delay). ✅
+    - Implement a timeout wrapper for a Promise (reject if Promise doesn’t settle in given time). ✅
+	- Write a function that limits concurrency of Promise-based tasks (e.g., max 3 at a time). ✅
+	- Implement a sequential Promise executor for an array of async functions. ✅
+
+	- What happens if you forget to return a Promise inside .then()? ✅
+	- What’s wrong with swallowing errors inside .catch()? ✅
+	- How to handle unhandled promise rejections? ✅
+ 	- How can you debug promise chains that don’t work as expected? ✅
+
+=============================================
+
+loadash 
+ - curry
+ - groupby
+ - keyby
+ - flow
+ - flowRight
+ - map
+ - reduce
+ - intersection
+ - union
+
+
+============================================
+
+classnames
+deepclone ii
+json stringify ii
+cancellable timeout
+big frontend dev - delay with timeout
+promise timeout
+isObject
+Object.is in react
+myNew operator
+
+
+
+=============================================
+- virtualization of table.
+- server side rendering
+- server components
+- react 19
+- concurrent react
+- web accessibility
+
+
+react coding questions
+ - file tree
+ - comments recursive
+ - tabs
+ - dropdown
+ - modal orcehstrator
+=============================================
+
+🔷 1. Polyfills - Arrays
+Sub-questions:
+
+What are some commonly used array methods that may need polyfills? (e.g. map, filter, forEach, reduce, find, includes, etc.)
+
+How do native array methods work internally?
+
+How can I check if a method already exists before defining a polyfill?
+
+How can I define a method on Array.prototype safely?
+
+How should each method handle edge cases, like:
+
+undefined or null arrays?
+
+empty arrays?
+
+sparse arrays (e.g. [1,,3])?
+
+How do I handle thisArg in methods like map, filter, etc.?
+
+Can I write test cases to validate my polyfills against native behavior?
+
+🔷 2. Polyfills - Promises (Core Promise Polyfill)
+Sub-questions:
+
+What is the basic structure of a Promise? (state, value, handlers)
+
+How do you implement the three internal states (pending, fulfilled, rejected)?
+
+How does .then() work?
+
+How does .catch() chain from .then()?
+
+What is the purpose of the executor function in new Promise((resolve, reject) => { ... })?
+
+How do you queue microtasks to ensure asynchronous behavior (e.g., setTimeout(fn, 0) or queueMicrotask)?
+
+How should you handle multiple .then() calls on the same promise?
+
+How do you propagate errors and ensure proper rejection handling?
+
+How to handle promise resolution with another promise or thenable?
+
+🔷 3. Polyfills - Promise Methods (Promise.all, Promise.race, etc.)
+Sub-questions:
+
+How does Promise.all work?
+
+How do you handle all promises resolving?
+
+How do you handle early rejection?
+
+How does Promise.race work?
+
+How do you resolve/reject with the first settled promise?
+
+How does Promise.allSettled differ from Promise.all?
+
+How to return an array of results with { status, value } or { status, reason }?
+
+How does Promise.any work?
+
+How to resolve with the first fulfilled promise?
+
+How to reject with AggregateError if all fail?
+
+How should each method handle non-promise values in the input array?
+
+How do you convert values to promises (i.e., using Promise.resolve)?
+
+Should the methods return new promises or reuse existing ones?
+
+Can you write a minimal test to confirm behavior matches native implementation?
+============================================
+
+dependency grah based task execution
+Memoization with Expiry
+Asynchronous Memoization with Expiry
+Implement Promise.all with Limited Concurrency
+Promise-based Batch Processor
+
+dropdown
+tabs
+
+module federation
+
+
+
+
+
+
+
+
+1. How would you design a micro-frontend architecture for a large application with multiple teams?
+
+What strategies would you use (e.g., module federation, iframe, custom build pipelines)?
+
+How do you handle shared dependencies, routing, and state management?
+
+What are the trade-offs of your approach?
+
+2. You need to improve time-to-interactive on a large React app. Where do you start?
+
+Discuss how you measure performance (e.g., Core Web Vitals).
+
+What tools do you use (e.g., Lighthouse, Chrome DevTools, WebPageTest)?
+
+Explain strategies like code-splitting, hydration optimizations, lazy loading, etc.
+
+3. How do you design a component library that is scalable, themeable, and accessible?
+
+How do you balance developer velocity with accessibility (WCAG)?
+
+How would you approach versioning, tree-shaking, and design token integration?
+
+Do you use tools like Storybook, Chromatic, Figma tokens?
+
+4. Explain your strategy for managing global state in a large front-end application.
+
+When would you use Redux vs. context vs. local state vs. custom solutions?
+
+How do you handle state persistence, caching, and server synchronization?
+
+What’s your opinion on event-driven vs. query-driven state?
+
+5. How do you prevent layout shifts in complex responsive UIs?
+
+Core Web Vital: CLS (Cumulative Layout Shift).
+
+Talk about pre-defining dimensions, avoiding lazy content pushing layout, CSS containment.
+
+6. Describe your approach to testing front-end applications at scale.
+
+How do you balance unit, integration, and E2E tests?
+
+What testing pyramid (or trophy) do you follow?
+
+Tools: Jest, Playwright, Testing Library, Cypress, etc.
+
+7. How would you implement real-time collaboration in a React app (like Figma or Google Docs)?
+
+How do you manage WebSocket connections, CRDT or OT algorithms?
+
+What are the key concerns in conflict resolution, latency compensation, and UX?
+
+How would you structure the codebase to support multi-user sessions?
+
+8. You’re tasked with migrating a large legacy app to a modern framework (e.g., React or Vue). How would you plan it?
+
+Migration strategies: Strangler pattern? Micro frontends?
+
+Technical debt mitigation, business constraints, rollout plan?
+
+How do you handle CI/CD during the migration?
+
+9. What are some browser APIs or low-level features you’ve used that most front-end engineers haven't?
+
+Examples might include: ResizeObserver, IntersectionObserver, MutationObserver, OffscreenCanvas, Web Workers, WebAssembly, Custom Paint API.
+
+10. How do you ensure performance in data-heavy UIs (e.g., dashboards, tables, virtual lists)?
+
+Strategies like virtualization, pagination, lazy loading.
+
+Avoiding re-renders: memo, PureComponent, selectors.
+
+Managing large JSON diffs or real-time chart updates.
+
+✅ Bonus Discussion Prompts
+
+"Tell me about a time when a front-end architecture decision impacted the business significantly."
+
+"How would you debug and fix a memory leak in a React SPA?"
+
+"What makes a design system successful across multiple teams?
+
+
+
+
+
+
+
+
+======
+problem solving (big)
+
+1. Virtual Scrolling in a Chat App
+
+💬 Design and implement a chat UI that loads messages dynamically as the user scrolls up. Messages can be thousands long.
+
+How would you manage the DOM for performance?
+
+How would you prevent jank when scrolling?
+
+How would you sync scroll position when new messages arrive?
+
+2. Throttle Expensive Renders
+
+🐌 You notice a UI component re-renders 60+ times on a single scroll event. Debug and optimize it.
+
+What tools would you use to profile the re-renders?
+
+How would you fix it?
+
+Where would you apply memoization or requestAnimationFrame?
+
+3. Drag-and-Drop Performance
+
+🧱 Build a Kanban board (like Trello) that supports drag-and-drop of tasks. After 1000+ items, performance degrades.
+
+How would you debug and improve performance?
+
+Would you use virtualization, intersection observers, batching?
+
+What trade-offs do you consider for UX?
+
+4. Live Search Over a Remote Dataset
+
+🔍 Implement a typeahead (autocomplete) that queries an API on user input with minimal delay, no overload, and consistent UI.
+
+How would you debounce API calls and cancel stale requests?
+
+How do you handle loading states and empty states smoothly?
+
+What if the user types rapidly? What UX issues arise?
+
+5. Conflicting States Between Tabs
+
+🔄 You have a web app with tabs open in two windows. User updates data in one tab — the other doesn't reflect it.
+
+How would you sync state across tabs? (e.g., via BroadcastChannel, localStorage, polling)
+
+How do you notify the user without disrupting their workflow?
+
+6. Design a Theme System for an App
+
+🎨 The product team wants support for multiple themes (dark, light, high-contrast) and per-user preferences.
+
+How would you structure CSS/JS?
+
+How would you persist user preferences?
+
+Can you do it without FOUC (flash of unstyled content)?
+
+7. Internationalization Problem
+
+🌐 You're launching a global product in 10+ languages. Some languages are RTL, and some require pluralization and context-aware grammar.
+
+How do you structure your translation system?
+
+What challenges exist in UI layout, RTL support, and dynamic content?
+
+What libraries or standards would you use?
+
+8. Responsive Layout Failures
+
+📱 On mobile, a critical component breaks layout after a recent deployment — but tests passed.
+
+How would you investigate the issue?
+
+How would you set up automated layout validation in CI?
+
+What role do visual regression tools (e.g., Percy, Chromatic) play?
+
+9. Handling Large JSON Payloads
+
+🧾 A frontend app receives large JSON payloads (~5MB+) which cause the UI to freeze.
+
+How would you prevent main-thread blocking?
+
+Would you use Web Workers or streaming APIs?
+
+How do you progressively render the content?
+
+10. Build a Collaborative Text Editor (Google Docs-like)
+
+✍️ Design a real-time collaborative editor with multiple cursors and live updates.
+
+What algorithm would you use: CRDT or OT?
+
+How do you prevent overwrites or conflicts?
+
+How would you visualize other users’ cursors and selections?
+
+
+====================================================================
+
+
+1. Flatten a Deeply Nested Object
+
+🔁 Implement a function that flattens an object of arbitrary depth using dot notation.
+
+// Input:
+{
+  user: {
+    name: "Alice",
+    address: {
+      city: "Wonderland",
+      zip: {
+        code: "12345"
+      }
+    }
+  }
+}
+
+// Output:
+{
+  "user.name": "Alice",
+  "user.address.city": "Wonderland",
+  "user.address.zip.code": "12345"
+}
+
+
+✅ Tests: recursion, edge-case handling, data modeling
+
+2. Build a Debounced Search Component
+
+⌛ Implement a live search box that fetches from an API, but only after the user stops typing for 300ms.
+
+Handle edge cases: race conditions, request cancellation.
+
+✅ Tests: async control flow, cleanup, performance optimization
+
+3. Create a Virtualized List
+
+📜 Render a list of 10,000 items without crashing the browser.
+
+Only render visible rows.
+
+Bonus: add infinite scroll support.
+
+✅ Tests: performance under load, IntersectionObserver, React optimization
+
+4. Design an Image Lazy Loader
+
+🖼️ Load images only when they are close to the viewport.
+
+Use IntersectionObserver or scroll listeners.
+
+Handle error/fallback images.
+
+✅ Tests: DOM APIs, performance, UX reliability
+
+5. Build a Custom Hook (React)
+
+🪝 Build a hook: useOnClickOutside(ref, callback)
+
+Call a function when a user clicks outside the given element.
+
+Works on all platforms and interaction types.
+
+✅ Tests: React internals, event bubbling, cleanup, abstraction
+
+6. Tab Sync with BroadcastChannel
+
+🧠 Implement state synchronization across browser tabs (e.g., auth state, dark mode).
+
+Use BroadcastChannel or fallback to localStorage + events.
+
+Must support bi-directional update.
+
+✅ Tests: browser APIs, real-time data flow
+
+7. Build a Custom Modal Manager
+
+🚪 Only one modal can be open at a time. Support stacking, ESC-to-close, click-outside, and focus trap.
+
+Architect it to be reusable and testable.
+
+✅ Tests: UI orchestration, accessibility, design patterns
+
+8. Dynamic Form Renderer
+
+📄 Given a JSON schema, render a dynamic form with validation and state management.
+
+Support text fields, radio buttons, checkboxes.
+
+Bonus: Add schema-driven validation.
+
+✅ Tests: component architecture, form abstraction, dynamic rendering
+
+9. Rich Text Editor (Mini)
+
+📝 Implement a minimal WYSIWYG editor (bold, italic, undo, redo).
+
+Use contenteditable, command APIs, or selection manipulation.
+
+✅ Tests: browser DOM manipulation, UI state control, undo stack
+
+10. Accessibility Audit Tool
+
+♿ Write a script or component that scans the DOM for basic a11y issues:
+
+Missing alt tags
+
+Missing labels for inputs
+
+Low contrast warnings
+
+✅ Tests: accessibility knowledge, DOM traversal, static analysis
+
+🧠 Bonus Real-World Challenge
+🔒 Implement Optimistic UI for a "Like" Button
+
+The UI should update instantly, while the API call happens in the background.
+
+Roll back if the call fails.
+
+Prevent double-clicks or out-of-sync states.
+
+✅ Tests: concurrency, UX, async state handling
+
+
+=================================
+awsome sets of quesitons
+=================================
+
+1. 🔄 Task Scheduler UI Simulation
+
+Implement a function to simulate scheduling of asynchronous tasks with a max concurrency limit.
+
+function schedule(tasks, limit) {
+  // tasks: array of async functions returning promises
+  // limit: number of parallel tasks
+}
+
+
+📌 Requirements:
+
+Run at most limit tasks in parallel.
+
+When one finishes, pick another from the queue.
+
+Return a promise that resolves when all tasks complete.
+
+✅ Tests:
+
+Concurrency control, async logic, queue implementation
+
+2. 🧭 Throttled Timeline Renderer
+
+You're building a timeline (like Facebook/LinkedIn). New items can arrive at any time.
+
+Build a throttler that:
+
+Buffers incoming items
+
+Flushes them to the UI in batches every 500ms
+
+Allows a "flush now" button
+
+✅ Tests:
+
+Task batching, memory management, async timing
+
+3. ⚙️ Job Retry Queue in the Browser
+
+Implement a function to retry failed jobs up to n times with exponential backoff.
+
+retryWithBackoff(() => apiCall(), { retries: 5, baseDelay: 200 });
+
+
+📌 Requirements:
+
+Retry only on failure
+
+Wait delay * 2^i before retry i
+
+Cancel on permanent error
+
+✅ Tests:
+
+Exponential logic, retry patterns, error handling
+
+4. 📅 Calendar View Generator
+
+Build a function that takes a start and end date and returns a structured calendar view (weeks, days, placeholders).
+
+Output must account for:
+
+Starting weekday
+
+Placeholder days before start
+
+Break rows on Sunday/Saturday
+
+Bonus: handle timezone shifts, DST
+
+✅ Tests:
+
+Date manipulation, edge cases, localization
+
+5. ⏳ Offline Task Queue for PWA
+
+In a Progressive Web App:
+
+Queue user actions while offline
+
+Sync them in order once online
+
+Show UI status of "pending" vs "synced"
+
+✅ Tests:
+
+Persistence (e.g., localStorage, IndexedDB)
+
+Task queuing and rehydration
+
+Async + lifecycle control
+
+6. 🎭 Render Scheduler with Priorities
+
+Build a task system that prioritizes UI-critical tasks over background work.
+
+UI rendering > analytics > sync
+
+Use requestIdleCallback, setTimeout, or queueMicrotask
+
+✅ Tests:
+
+Task prioritization, idle time optimization, UI jank reduction
+
+7. 📬 Async Form Autosave with Debounce + Retry
+
+Implement autosave that:
+
+Debounces changes (500ms)
+
+Saves via API
+
+Retries up to 3 times on failure
+
+✅ Tests:
+
+Debounce pattern, async retries, UX edge cases (fast typing, disconnects)
+
+8. 📈 Render a Data-Heavy Heatmap
+
+You’re given a 2D array of numerical values.
+
+Render a grid as a heatmap (color based on value)
+
+Support zoom/pan, efficient re-renders
+
+Avoid DOM overload
+
+✅ Tests:
+
+Canvas or DOM optimization, virtualization, large data handling
+
+9. 📦 Prioritized Render Queue for DOM Updates
+
+You need to batch DOM updates and execute them in a given order of priority.
+
+enqueueDOMUpdate(priority, fn);
+// priorities: 'high' | 'medium' | 'low'
+
+
+📌 Requirements:
+
+Always flush high-priority updates first
+
+Avoid layout thrashing
+
+✅ Tests:
+
+Queues, reflow avoidance, batching
+
+10. 🔁 Custom Hook: useTaskQueue
+
+Build a React hook to enqueue and run async tasks sequentially.
+
+const { addTask, cancelAll } = useTaskQueue();
+
+
+📌 Requirements:
+
+Ensure order is preserved
+
+Tasks can be canceled mid-queue
+
+Queue handles errors gracefully
+
+✅ Tests:
+
+Hook lifecycle, cleanup, queue handling in React
+
+11. 🛠 Concurrent Editable Sections
+
+A collaborative document has multiple editable sections.
+Implement a system to prevent two users from editing the same section at once, using a lock system.
+
+Lock expires after 30s of inactivity.
+
+Show real-time lock status (WebSocket or polling).
+
+Unlock when user navigates away.
+
+✅ Tests: concurrency control, user feedback, real-time sync
+
+12. 📦 Dependency-Ordered Task Execution
+
+Given a list of async tasks with dependencies, execute them in the correct order.
+
+[
+  { id: "a", deps: [] },
+  { id: "b", deps: ["a"] },
+  { id: "c", deps: ["a"] },
+  { id: "d", deps: ["b", "c"] }
+]
+
+
+Output: ["a", "b", "c", "d"], with parallelism where possible.
+
+✅ Tests: topological sorting, promise coordination, dependency graphs
+
+13. 🔐 Session Expiry Timer with UI Feedback
+
+Display a countdown when a user session is about to expire.
+Let them extend the session before time runs out.
+
+5-minute warning UI
+
+Auto logout when timer hits 0
+
+Clean up timers on unmount
+
+✅ Tests: timers, cleanup, lifecycle correctness
+
+14. 🗃 Large JSON Viewer with Collapse/Expand
+
+Build a viewer for a deeply nested JSON object:
+
+Allow collapse/expand for each level
+
+Show up to 1000 nodes efficiently
+
+Avoid crashing the browser
+
+✅ Tests: recursion, virtualization, lazy rendering
+
+15. 📁 Directory Tree Renderer
+
+Render a file system structure like a code editor's sidebar:
+
+[
+  { name: "src", type: "folder", children: [...] },
+  { name: "package.json", type: "file" }
+]
+
+
+Recursive rendering
+
+Collapsible folders
+
+Highlight selected file path
+
+✅ Tests: tree traversal, component recursion, stateful UI
+
+16. 🧭 Timeline Slider with Snap Points
+
+Build a media timeline slider (e.g., video scrubber):
+
+Snap to markers (e.g., chapter timestamps)
+
+Keyboard accessible
+
+Smooth dragging with debounce
+
+✅ Tests: UX fidelity, accessibility, pointer event handling
+
+17. 🧮 Floating Point Calculation Display
+
+Build a calculator or form that:
+
+Correctly handles floating point precision (e.g., 0.1 + 0.2 = 0.3)
+
+Prevents UI rounding errors
+
+Allows live updates with precision settings
+
+✅ Tests: number formatting, user input sync, edge-case correctness
+
+18. 📡 Simulate Request Queue for Offline Mode
+
+Implement a system that:
+
+Caches user actions when offline
+
+Replays them in order once online
+
+Shows progress in UI as actions complete
+
+✅ Tests: async queueing, persistence, failure recovery
+
+19. 🧩 Dynamic Widget Layout Editor (Drag & Drop)
+
+Build a dashboard editor where users can drag/drop widgets:
+
+Snap to grid
+
+Save layout to localStorage or API
+
+Support resize, move, and delete
+
+✅ Tests: interaction patterns, drag physics, state management
+
+20. 📺 Scroll-Triggered Lazy Component Loader
+
+Only load/render components when they become visible in the viewport:
+
+E.g., tabbed UI with heavy reports
+
+Use IntersectionObserver or fallback polyfill
+
+Smooth load-in animation
+
+✅ Tests: browser APIs, performance optimization, conditional loading
+
+🧠 These Questions Test:
+Concept	✅
+Async control and retries	✅
+Scheduling and queues	✅
+DOM performance + event handling	✅
+Real-time systems (collab, sync)	✅
+User state + interaction flows	✅
+Resiliency + error recovery	✅
+
+Would you like:
+
+🧪 Unit test templates for any of these?
+
+🧱 Boilerplate in React/TypeScript?
+
+🧑‍💻 Live-coding practice session?
+
+📊 Sorted list by difficulty or topic?
+
+Let me know how deep you want to go — I can simulate full interview sessions or drill into any question.
+
+You said:
+more tough, more 10
+ChatGPT said:
+
+Absolutely — here are 10 even tougher, system-level front-end coding problems, ideal for a Staff or Principal Frontend Engineer role. These push deeper into browser internals, asynchronous systems, concurrent UI logic, and design for scalability and resilience — the kind of problems you'd face in high-impact engineering orgs like Google, Meta, Stripe, or Airbnb.
+
+🔟 Extremely Tough Front-End Problem-Solving Challenges
+
+💡 All are implementation-focused, real-world inspired.
+
+21. 🔄 Concurrent API Call Deduplication
+
+Multiple components call the same API simultaneously. Implement a deduplication layer that:
+
+Shares the in-flight request promise
+
+Resolves all consumers with the same result
+
+Avoids double-fetching
+
+✅ Skills tested: memoization, caching, Promise orchestration
+
+22. 🎨 Design a Real-Time Design Tool Canvas (Figma-like)
+
+Build a collaborative canvas engine:
+
+Supports multiple shapes
+
+Mouse + keyboard interaction
+
+Snap-to-grid
+
+Multi-user position sync (WebSocket)
+
+✅ Skills tested: canvas APIs, rendering engine architecture, real-time systems
+
+23. 🪝 useStaggeredQueue() Hook for Ordered UI Animations
+
+Build a custom React hook to queue animation triggers and fire them sequentially with delay.
+
+const { addToQueue } = useStaggeredQueue({ delay: 150 });
+
+
+Used to animate cards or list items one by one
+
+Option to cancel queue or flush instantly
+
+✅ Skills tested: async control in hooks, animation pipelines, scheduling
+
+24. 🕹️ Multiplayer Cursor Synchronization Engine
+
+Design a system to sync multiple user cursors on a shared screen:
+
+Broadcast user position every 50ms
+
+Smooth movement using interpolation
+
+Display color-coded names near cursors
+
+✅ Skills tested: real-time data flow, client prediction, animation interpolation
+
+25. 🪟 Simulate requestIdleCallback() in Unsupported Browsers
+
+Implement a fallback for requestIdleCallback() using setTimeout and performance.now().
+
+Schedule low-priority work
+
+Cancel when main thread is busy
+
+Provide didTimeout argument
+
+✅ Skills tested: main-thread profiling, performance.now, compatibility polyfills
+
+26. 🧰 Create a Dynamic Worker Pool
+
+Write a browser-side job manager that:
+
+Uses Web Workers to offload CPU-heavy tasks
+
+Spawns up to N workers
+
+Queues remaining jobs
+
+✅ Skills tested: multithreading in frontend, resource management, pool design
+
+27. 🧠 Create a Dependency Graph Visualizer
+
+Given a dependency map, render a D3 or canvas-based graph:
+
+{
+  A: ["B", "C"],
+  B: ["D"],
+  C: [],
+  D: []
+}
+
+
+Use force-directed layout
+
+Support pan/zoom
+
+✅ Skills tested: graph rendering, canvas/SVG, layout algorithms
+
+28. 🏗️ Build Your Own Reactivity System (Vue-like)
+
+Implement a simplified reactivity system:
+
+const state = reactive({ count: 0 });
+watch(() => state.count, () => console.log("Changed!"));
+
+
+Support dependency tracking
+
+Trigger on changes
+
+✅ Skills tested: Proxy, dependency graphs, observer patterns
+
+29. 🧼 Build a Suspense-Aware Data Cache
+
+Design a React-compatible data cache that:
+
+Caches async results
+
+Suspends when data is loading
+
+Resumes rendering once available
+
+API:
+
+const user = fetchUser(userId); // throws a promise if loading
+
+
+✅ Skills tested: React Suspense, lazy cache architecture, async primitives
+
+30. 🧾 Type-Aware Dynamic Form Engine (With Validation)
+
+Render forms dynamically based on a schema:
+
+{
+  fields: [
+    { name: "email", type: "email", required: true },
+    { name: "age", type: "number", min: 18 },
+  ]
+}
+
+
+Support nested forms
+
+Auto-validation
+
+Show error messages on blur
+
+✅ Skills tested: schema-driven rendering, validation pipelines, reusability
+
+
+
+
+31. 📉 High-Frequency Event Pipeline
+
+Build a system that processes 1000+ events per second (e.g. mouse movement, sensor data) with:
+
+Event deduplication
+
+Rate limiting
+
+Final summary batch every 1 second
+
+✅ Tests: data throttling, windowing, performance tuning
+
+32. 📥 DOM Mutation Observer Diff Viewer
+
+Implement a visualizer that shows diffs in real-time as DOM changes:
+
+Use MutationObserver
+
+Render changes in a side panel
+
+Group changes per parent node
+
+✅ Tests: DOM observation, tree diffing, live UIs
+
+33. 🗂 Hierarchical Undo/Redo Engine
+
+Implement undo/redo with support for grouped actions (e.g., a batch drag that moves multiple items at once).
+
+Nested history stacks
+
+Selective undo
+
+Display history UI
+
+✅ Tests: history state management, stack structures, UX fidelity
+
+34. 🧭 Implement a Task Orchestration DSL in JS
+
+Given a DSL like:
+
+task("fetchUser").then("fetchPermissions").parallel("fetchSettings", "fetchLogs")
+
+
+Execute in correct order
+
+Support .then() and .parallel()
+
+Allow retries on failure
+
+✅ Tests: promise graph building, execution control flow, DSL parsing
+
+35. 💡 Realtime Suggest-as-You-Type Search with Token Highlighting
+
+As a user types:
+
+Fetch and display suggestions
+
+Highlight matching tokens in results
+
+Support keyboard navigation
+
+✅ Tests: input handling, async fetch + UI update, UX interaction
+
+36. 🧱 Build a Dynamic Grid System (Responsive + Draggable)
+
+Similar to Notion or a CMS:
+
+Users can drag/rescale widgets
+
+Snap to 12-column grid
+
+Responsive on window resize
+
+✅ Tests: grid layout math, resize + drag logic, state sync
+
+37. 🕰️ Optimistic UI + Conflict Resolution System
+
+Design a comment system where:
+
+Comments appear immediately (optimistic)
+
+If the server rejects the comment, roll it back
+
+If edited in two tabs, resolve last-write-wins
+
+✅ Tests: state diffing, reconciliation, multi-tab sync
+
+38. 🧠 Multi-Step Wizard State Machine
+
+Implement a multi-step form wizard:
+
+Each step may conditionally skip the next
+
+Track back/next history
+
+Must support validation at each step
+
+✅ Tests: state machine modeling, dynamic step flow, form state persistence
+
+39. 🔗 Implement Your Own URL Router (SPA)
+
+Build a vanilla JS router:
+
+Handles pushState, back/forward
+
+Parses dynamic segments (/user/:id)
+
+Route guards (auth)
+
+✅ Tests: browser history API, pattern matching, route lifecycles
+
+40. 📐 Adaptive UI Layout Based on Device Characteristics
+
+Render a dashboard that adapts layout based on:
+
+Screen size
+
+Orientation (portrait vs landscape)
+
+Input type (touch vs mouse)
+
+✅ Tests: responsive design via logic (not CSS only), media APIs, device detection
+
+
+
+51. Implement Promise Pool / Concurrency Limiter
+
+Build a function promisePool(tasks, n) that runs up to n promises concurrently from an array of async tasks and resolves when all complete.
+
+52. Promise Retry with Exponential Backoff
+
+Implement a function that retries a failing promise-returning function up to maxRetries times with exponential delay (e.g., 100ms, 200ms, 400ms…).
+
+53. Promise Timeout Wrapper
+
+Create a wrapper function that rejects a promise if it doesn’t resolve within a specified timeout duration.
+
+const timeoutPromise = (p, ms) => /* ... */;
+
+54. Race with Cancelable Promises
+
+Implement a promiseRaceCancelable that races multiple promises but allows canceling remaining ones once one resolves/rejects.
+
+55. Sequential Promise Execution with Results
+
+Given an array of functions returning promises, execute sequentially and collect results in order.
+
+56. AllSettled Polyfill
+
+Implement a polyfill for Promise.allSettled() that returns the status and value/reason for all promises.
+
+57. Chain of Dependent Promises
+
+Given a set of promises where each depends on the previous result, write a function that chains and executes them, handling errors gracefully.
+
+58. Throttle Async Function Calls
+
+Implement a throttle wrapper for an async function so that it runs at most once every N ms, queueing or dropping calls as needed.
+
+59. Cancelable Delay Promise
+
+Create a promise-based delay function that supports cancellation.
+
+const { promise, cancel } = cancellableDelay(ms);
+
+60. Promise-based Task Queue with Priorities
+
+Design a priority queue that runs async tasks as promises, always running highest priority tasks first, supporting dynamic addition.
+
+
+
+10 More Challenging Promise & Async Questions
+61. Implement Promise.any Polyfill
+
+Create a polyfill for Promise.any() that resolves as soon as any promise fulfills, or rejects if all reject.
+
+62. Deep Flatten Nested Promises
+
+Given an array that can contain promises or nested arrays of promises, flatten all and resolve a single array of results.
+
+63. Promise Debounce
+
+Implement a debounce utility that delays promise execution and cancels previous pending promises if a new call arrives.
+
+64. Promise Throttler with Queue
+
+Create a throttler that limits the number of concurrent promises and queues additional calls until a slot frees up.
+
+65. Promise Cancellation Token
+
+Design a cancellation token system that can cancel ongoing promises cooperatively (without native cancellation).
+
+66. Compose Multiple Async Middleware Functions
+
+Given an array of async middleware functions (ctx, next) => Promise, chain them so each can control the flow like Koa.js.
+
+67. Promise-based Semaphore
+
+Implement a semaphore using promises to control access to a limited number of resources asynchronously.
+
+68. Implement Promise.finally Polyfill
+
+Write a polyfill for Promise.prototype.finally that executes a callback regardless of promise outcome.
+
+69. Race Multiple Promises with Timeout Fallback
+
+Create a function that races an array of promises but falls back to a default value if none resolves within timeout.
+
+70. Promise-based Exponential Backoff with Jitter
+
+Implement retry logic for a promise with exponential backoff that includes random jitter to reduce collision.
+
+
+71. Promise Dependency Graph Executor
+
+Given tasks as promises with explicit dependencies (e.g., task B depends on task A), implement an executor that runs tasks respecting dependencies and maximizes parallelism.
+
+72. Deadlock Detection in Async Task Graph
+
+Given a graph of async tasks with dependencies, detect if there is a circular dependency causing deadlocks before executing.
+
+73. Dynamic Dependency Injection for Async Tasks
+
+Design a system where async tasks can declare dependencies by name and get their resolved results injected automatically at runtime.
+
+74. Promise Chaining with Conditional Branching
+
+Implement a promise chain where next tasks depend conditionally on previous results (e.g., run task C only if task B’s result > 5).
+
+75. Retry Failed Dependent Tasks with Exponential Backoff
+
+For a set of dependent async tasks, retry failed tasks with backoff without restarting the entire chain.
+
+76. Build a Transaction-like System with Async Rollbacks
+
+Execute multiple async tasks with dependencies; if one fails, rollback previous tasks asynchronously in reverse order.
+
+77. Promise Cancellation Propagation in Dependency Chain
+
+Implement a cancellation mechanism where canceling a parent promise cancels all dependent child promises in the chain.
+
+78. Prioritized Promise Execution with Dependency Resolution
+
+Schedule promises to run respecting dependencies but prioritize higher priority tasks to run earlier if possible.
+
+79. Timeouts and Fallbacks in Promise Dependency Chains
+
+For dependent tasks, set timeouts on individual promises and provide fallback promises if a dependency times out.
+
+80. Partial Result Aggregation with Dependent Promises
+
+Run dependent promises and aggregate partial results as soon as each completes, streaming results rather than waiting for all.
+
+
+
+
+10 Additional Tough Promise Questions
+81. Promise Chain with Parallel Branches
+
+Design a function to execute promise chains where some branches run in parallel and merge results, preserving order.
+
+82. Implement Promise-based Event Emitter
+
+Create an event emitter where listeners can return promises; event emit waits for all listeners to resolve or rejects if any fails.
+
+83. Promise-based Mutex Lock
+
+Build a mutex that uses promises to serialize async access to a critical section.
+
+84. Sequential Execution with Early Exit
+
+Run an array of promise-returning functions sequentially but stop and return immediately on the first rejection.
+
+85. Promise-based Debounce with Latest Result
+
+Implement debounce logic for async functions where only the latest call’s promise result resolves; earlier calls get canceled or ignored.
+
+86. Cancelable Promise with AbortController
+
+Wrap a fetch call or async task to support cancellation using AbortController and propagate cancellation downstream.
+
+87. Promise-based Batch Processor
+
+Group many async calls into batches, running batches sequentially but calls within batch in parallel.
+
+88. Implement Promise.all with Limited Concurrency
+
+Build a version of Promise.all that accepts a concurrency limit to avoid firing all promises at once.
+
+89. Promise Timeout with Fallback Value
+
+Create a helper that wraps a promise and resolves with a fallback value if the promise doesn’t resolve in time.
+
+90. Asynchronous Memoization with Expiry
+
+Memoize async function results, caching promises, with expiration time to refresh cache after expiry.
+
+
+
+. Implement a Promise Scheduler with Priorities and Starvation Avoidance
+
+Schedule promise tasks with priority levels but ensure low-priority tasks also get executed eventually (fairness).
+
+92. Promise Circuit Breaker
+
+Build a promise wrapper that short-circuits (rejects immediately) if a threshold of recent failures is exceeded, resetting after cooldown.
+
+93. Implement Your Own Async Generator Using Promises
+
+Create an async generator function polyfill that yields values asynchronously using promises.
+
+94. Promise Queue with Dynamic Concurrency Based on System Load
+
+Throttle concurrent promise executions dynamically adjusting concurrency limit based on CPU or memory usage signals.
+
+95. Implement Promise-based Distributed Lock with Renewal
+
+Simulate a distributed lock mechanism using promises with lease renewal logic to prevent stale locks.
+
+96. Promise Chain with Parallel Retry and Race Condition Handling
+
+Retry failed promises in parallel but ensure only the first successful result is used, cancelling others.
+
+97. Async Task Pipeline with Backpressure and Buffering
+
+Build a pipeline of async stages processing data with controlled buffer sizes to avoid memory overflow.
+
+98. Implement a Cancelable Promise Chain with Rollback Side-Effects
+
+Support cancellation mid-chain and undo side effects of completed steps in reverse order.
+
+99. Promise-based Sliding Window Rate Limiter
+
+Limit async task starts to a max number in a sliding time window (e.g., 5 requests per 10 seconds).
+
+100. Composable Promise Middleware with Error Recovery
+
+Chain middleware-like promise functions that can recover from errors and decide whether to continue or abort.
+
+
+10 More Advanced Questions on Dependency Management
+111. Implement a Dependency Resolver with Version Constraints
+
+Design a system that resolves dependencies between modules/packages with version constraints (like semver), detecting conflicts.
+
+112. Detect and Resolve Cyclic Dependencies Automatically
+
+Build a tool that detects cyclic dependencies in module graphs and suggests or performs automatic resolution (e.g., lazy loading).
+
+113. Dynamic Module Loader with Dependency Injection
+
+Create a loader that fetches and initializes JS modules asynchronously with explicit dependencies, injecting required modules.
+
+114. Topological Sort with Parallel Execution Groups
+
+Given tasks with dependencies, return execution groups that can run in parallel while preserving overall dependency order.
+
+115. Reactive Dependency Graph for UI State Updates
+
+Implement a reactive system where state changes trigger only dependent components to re-render, efficiently tracking dependencies.
+
+116. Incremental Dependency Graph Update
+
+After changing one module/task, efficiently update affected downstream dependencies without recomputing the entire graph.
+
+117. Promise-based Dependency Injector with Circular Dependency Detection
+
+Create a promise-based injector that resolves dependencies asynchronously and throws meaningful errors on cycles.
+
+118. Prioritized Dependency Resolution with Deadlines
+
+Schedule dependencies with priorities and deadlines, aborting or reprioritizing tasks to meet deadlines when possible.
+
+119. Dependency-Aware Cache Invalidation
+
+Design a cache system that invalidates entries based on dependency changes, e.g., if module A changes, modules depending on A also invalidate.
+
+120. Build a Data Pipeline with Dependent Async Stages and Error Propagation
+
+Create a pipeline where each stage depends on previous stage results, propagates errors downstream with retry logic on failures.
+
+
+0 More Challenging Dependency Management Questions
+121. Implement Lazy Dependency Loading with Fallbacks
+
+Load dependencies lazily only when needed, with fallback modules if primary ones fail or are unavailable.
+
+122. Detect and Handle Diamond Dependencies
+
+Given a dependency graph where multiple paths lead to the same dependency, ensure it’s loaded/executed only once without conflicts.
+
+123. Implement a Dependency Cycle Breaker Using Proxies
+
+Use JS Proxies to detect and break circular dependencies at runtime in a module system.
+
+124. Design a Versioned Dependency Graph with Multiple Compatible Versions
+
+Manage multiple versions of dependencies coexisting, ensuring correct versions are used per dependent module.
+
+125. Build a Dependency-Aware Task Scheduler with Cancellation and Pause
+
+Scheduler that runs dependent async tasks with ability to cancel or pause specific branches without affecting others.
+
+126. Graph Diffing to Update Only Changed Dependencies
+
+When dependencies change, diff graphs to compute minimal updates needed for dependent modules/tasks.
+
+127. Hot Module Replacement with Dependency Awareness
+
+Implement HMR that reloads modules and their dependents intelligently without full page reload.
+
+128. Dependency Injection Container with Scoped Lifetimes
+
+Build a DI container supporting different lifetimes (singleton, transient, scoped) with dependency graph resolution.
+
+129. Dependency Resolution in Micro-Frontend Architectures
+
+Handle dependencies and shared libraries across independently deployed micro-frontends to avoid duplication and conflicts.
+
+130. Build a Visual Dependency Graph Editor
+
+Create an interactive UI to visualize and edit dependency graphs with drag/drop and real-time consistency validation.
+
+
+131. Implement Dependency Resolution with Optional Dependencies
+
+Support dependencies that may or may not be present, gracefully handling optional modules/tasks in the graph.
+
+132. Design a Fault-Tolerant Dependency Graph Executor
+
+Run dependent async tasks with retries and fallback strategies on failures without blocking unrelated branches.
+
+133. Dependency Graph with Weighted Edges for Cost-Based Scheduling
+
+Assign weights (costs) to edges/dependencies and schedule tasks to minimize total execution time or resource use.
+
+134. Incremental Build System with Dependency Tracking
+
+Design a build system that rebuilds only affected files/modules based on dependency changes.
+
+135. Dependency Injection with Circular Dependency Resolution via Factories
+
+Use factory functions or lazy initialization to resolve circular dependencies in DI containers.
+
+136. Implement a Two-Phase Commit Protocol for Async Task Groups
+
+Coordinate multiple dependent async tasks with a commit phase ensuring all succeed or rollback.
+
+137. Build a Smart Dependency Cache with Staleness Detection
+
+Cache dependency results and detect staleness based on timestamps or version hashes to trigger refresh.
+
+138. Reactive Dependency Graph with Memoization
+
+Implement reactive computations that cache intermediate results and recompute only when dependencies change.
+
+139. Dependency Graph Visualization with Conflict Highlighting
+
+Visualize dependency graphs and highlight version conflicts or cyclic dependencies in the UI.
+
+140. Design an Async Dependency Resolver Supporting Multiple Protocols
+
+Resolve dependencies that may come from HTTP, local storage, or indexedDB with unified async interface.
+
+
+141. Design a Scalable Dependency Graph Executor Supporting Millions of Nodes
+
+Handle execution, failure recovery, and state persistence for extremely large async task graphs efficiently.
+
+142. Implement a Distributed Dependency Resolver Across Multiple Browsers/Clients
+
+Synchronize and resolve dependencies in real-time among multiple clients collaborating asynchronously.
+
+143. Build a Hybrid Sync-Async Dependency Graph with Partial Sync Results
+
+Support tasks that can return partial sync results immediately, followed by async completion, propagating partial states.
+
+144. Design a Fine-Grained Change Propagation System for UI with Dependency Tracking
+
+Efficiently propagate minimal updates to UI components based on deep dependency graphs of data and events.
+
+145. Implement Probabilistic Dependency Resolution for Flaky Networks
+
+Incorporate probabilistic models to decide on retry/fallback strategies for dependencies under unreliable conditions.
+
+146. Build a Dependency Graph Executor with Real-Time Prioritization and Preemption
+
+Dynamically reprioritize and preempt running tasks based on changing conditions or user input.
+
+147. Create a Multi-Version Concurrency Control (MVCC) System for Frontend State Management
+
+Handle concurrent state updates and dependency resolution with versioning and conflict detection.
+
+148. Design an Optimistic Dependency Execution Model with Conflict Resolution
+
+Speculatively execute dependent tasks before all dependencies are confirmed, rolling back on conflicts.
+
+149. Implement a Dependency Graph with Support for Cyclic Dependencies via Lazy Evaluation
+
+Allow cycles in dependency graphs by delaying evaluation until values are actually needed.
+
+150. Build a Fault-Tolerant, Self-Healing Dependency System with Automatic Recovery
+
+Design a system that detects failures, attempts recovery, retries selectively, and maintains consistency without manual intervention.
+
+
+
+
+
+151. Implement Real-Time Dependency Graph Updates with Collaborative Editing (React/JS)
+
+Design a React-based dependency graph editor where multiple users can update async task dependencies simultaneously. Handle conflict resolution using CRDTs or Operational Transforms in JavaScript.
+
+152. Design an Event-Driven Dependency System with Backpressure Handling (Node.js Streams)
+
+Create an event-driven system in Node.js where async event handlers depend on each other. Implement backpressure handling to avoid overwhelming downstream handlers.
+
+153. Build a Context-Aware Dependency Injector Supporting Multiple Scopes and Lifetimes (JS DI Container)
+
+Implement a JavaScript dependency injection container that manages singleton, transient, and request-scoped dependencies for frontend and backend code.
+
+154. Develop a Dependency-Driven UI Rendering Engine with Incremental Hydration (React SSR)
+
+Design a React hydration strategy that rehydrates only the components affected by changed async data dependencies, improving client startup time.
+
+155. Implement Asynchronous Dependency Graph Compression to Reduce Complexity (Webpack Plugin)
+
+Create a Webpack plugin that analyzes the module dependency graph asynchronously, compressing redundant dependency chains to optimize bundle size.
+
+156. Design a Dependency System Supporting Hot Swapping of Modules at Runtime (HMR in JS)
+
+Implement Hot Module Replacement (HMR) logic in JavaScript that updates modules and all dependent modules without a full page reload.
+
+157. Create a Predictive Dependency Scheduler Using Machine Learning (Browser Task Scheduler)
+
+Use JS-based ML libraries (e.g., TensorFlow.js) to predict async task execution times and optimize scheduling of dependent promises in the browser.
+
+158. Build a Secure Dependency Resolver with Access Control and Permissions (JS Module Loader)
+
+Design a secure JavaScript module loader that enforces permissions on which modules can depend on or import others, protecting sensitive code.
+
+159. Implement Dependency-Driven State Synchronization Across Distributed Clients (React + WebSockets)
+
+Build a React state manager that syncs dependent state across clients via WebSockets, resolving conflicts and applying updates only to affected components.
+
+160. Design a Fault-Resilient Async Pipeline with Checkpointing and Replay (RxJS)
+
+Create an RxJS-based async data pipeline that checkpoints intermediate results and can replay from failures without losing progress.
+
+161. Build a Multi-Tenant Dependency Injection Framework (Node.js Backend)
+
+Implement a Node.js DI container that supports isolated dependency graphs per tenant while sharing common infrastructure services.
+
+162. Implement a Dependency-Driven Cache Invalidation System with Distributed Coordination (Service Workers + IndexedDB)
+
+Use Service Workers and IndexedDB to cache JS module data in the browser, invalidating caches based on dependency changes coordinated across tabs.
+
+163. Design a Fine-Grained Reactive System with Dependency Tracking at Property Level (Vue.js Reactivity)
+
+Build a Vue.js-like reactivity system that tracks dependencies on individual object properties to optimize component updates.
+
+164. Create a Dependency Management System with Temporal Dependencies (Scheduled JS Tasks)
+
+Manage dependencies between JavaScript async tasks that are only valid or runnable during specific time windows (e.g., calendar-based UI updates).
+
+165. Implement Dynamic Dependency Graph Restructuring Based on Runtime Metrics (Chrome DevTools Profiler)
+
+Create a profiler extension that dynamically restructures JS module dependencies in a graph based on runtime performance metrics gathered from Chrome DevTools.
+
+166. Design a Dependency Graph Executor Supporting Hybrid Local and Remote Execution (Electron App)
+
+Build an Electron app feature that runs dependent async tasks locally or remotely (e.g., cloud), dynamically switching based on task complexity.
+
+167. Build a Dependency Resolution System Supporting Polyglot Environments (WebAssembly + JS)
+
+Resolve dependencies in a JavaScript app that uses WebAssembly modules alongside JS, ensuring correct load order and interop.
+
+168. Implement a Versioned Dependency Graph Supporting Branching and Merging (JS Monorepo Tooling)
+
+Design tooling for JavaScript monorepos (like Lerna) that manages multiple versions of dependencies and supports branching/merging dependency graphs.
+
+169. Design a Dependency-Aware Scheduler for Time-Sensitive Real-Time Applications (React Native)
+
+Implement a scheduler in React Native that prioritizes async dependencies for animations and gestures under strict frame deadlines.
+
+170. Create a Visual Debugger for Async Dependency Graphs with Step-Through Execution (Chrome DevTools Extension)
+
+Develop a Chrome DevTools extension that visualizes and lets developers step through promise chains and async dependency graphs in JS apps.
+
+
+
+
+================================================================
+
+great frontend
+
+Count By
+Implement a function that counts the number of times a value appears in an array based on a function or property name
+
+
+Curry
+Implement a function that transforms a function that takes multiple arguments into a function that can be repeatedly called with only one argument at a time
+
+
+Debounce
+Implement a function to limit how many times a function can be executed by delaying the execution of the function until after a specified time after its last execution attempt
+
+
+Promisify
+Implement a function that takes a function following the common error-first callback style and returns a version that returns promises
+
+
+Throttle
+Implement a function to control the execution of a function by limiting how many times it can execute over time
+
+
+useArray
+Implement a hook that manages an array of items
+
+
+useDebounce
+Implement a hook that debounces a value
+
+
+useSet
+Implement a hook that manages a JavaScript set
+
+
+useTimeout
+Implement a hook that invokes a callback function after a specified delay
+
+
+useWindowSize
+Implement a hook that returns the current height and width of the window
+
+
+Classnames
+Implement a function that conditionally joins CSS class names together
+
+
+Data Merging
+Implement a function to merge rows of data from the same user
+
+
+Event Emitter
+Implement a class that can subscribe to and emit events that trigger attached callback functions
+
+
+Flatten
+Implement a function that recursively flattens an array into a single level deep
+
+
+getElementsByStyle
+Implement a function to get all DOM elements that are rendered using the specified style
+
+
+HTML Serializer
+Implement a function to serialize an object into an HTML string with indentation
+
+
+JSON.stringify
+Implement a function that converts a JavaScript value into a JSON string
+
+
+List Format
+Implement a function that formats a list of items into a single readable string
+
+
+Memoize
+Implement a function that returns a memoized version of a function which accepts a single argument
+
+
+Middlewares
+Implement a function that composes asynchronous middleware functions like in Koa.js
+
+
+Promise.all
+Implement the Promise.all() function that resolves to an array of results if all the input elements are resolved or rejects otherwise
+
+
+Promise.any
+Implement the Promise.any() function that resolves when any of the input elements are resolved
+
+
+Squash Object
+Implement a function that returns a new object after squashing the input object into a single level of depth
+
+
+useInputControl
+Implement a hook that manages a controlled input value and tracks its dirty & touched state
+
+
+useMediaQuery
+Implement a hook that subscribes and responds to media query changes (e.g. screen size, resolution, orientation, etc.)
+
+
+useMediatedState
+Implement a hook that is similar to useState, but supports a mediation process
+
+
+useQuery
+Implement a hook that manages a promise resolution
+
+
+Deep Clone
+Implement a function that performs a deep copy of a value
+
+
+Deep Equal
+Implement a function that determines if two values are equal
+
+
+getElementsByClassName
+Implement a function to get all DOM elements that contain the specified classes
+
+
+Map Async Limit
+Implement a function that maps an array of items with an asynchronous mapping function while not exceeding the concurrency limit
+
+
+Deep Omit
+Implement a function that removes specified keys and their corresponding values from an object, including nested objects or arrays
+
+Make Counter II
+Implement a function that returns a counter object with methods to retrieve and manipulate the value
+
+Array.prototype.concat
+Implement the Array.prototype.concat() method
+
+Group By
+Implement a function that groups values in an array based on a function or property name
+
+Intersection By
+Implement a function that returns an array of unique values that are included in all given arrays based on a provided iteratee function
+
+Intersection With
+Computes the intersection of arrays using a custom comparator function to determine equality between elements
+
+Is Empty
+Implement a function to check if a value is an empty object, collection, map, or set
+
+Limit
+Implement a function that accepts a callback and restricts its invocation to at most N times
+
+Promise Merge
+Implement a function to merge the results of two promises into a single value
+
+Promise Timeout
+Implement a function that resolves a promise if it is fulfilled within a timeout period and rejects otherwise
+
+Promise.resolve
+Implement a function to resolve a given value to a Promise
+
+Promise.withResolvers
+Implement a function that returns an object containing a new `Promise` object and two functions to resolve or reject it
+
+Promisify II
+Implement a promisify function that allows the original function to override the return value
+
+Turtle
+Implement a Turtle class that moves a turtle on a 2D plane
+
+Union By
+Implement a function that creates an array of unique values, in order, from all given arrays.
+
+useBreakpoint
+Implement a hook that returns the current breakpoint name based on the current window width
+
+useClickOutside
+Implement a hook that detects clicks outside of a specified element
+
+useCountdown
+Implement a hook that manages a countdown
+
+useEventListener
+Implement a hook that subscribes to browser events
+
+useHover
+Implement a hook that tracks whether an element is being hovered
+
+useInterval
+Implement a hook that creates an interval that invokes a callback function at a specified delay
+
+useKeyPress
+Implement a hook that subscribes to keyboard events
+
+useMap
+Implement a hook that manages a JavaScript map
+
+useObject
+Implement a hook that manages an object value
+
+useStep
+Implement a hook that manages a step counter for a multi-step process
+
+useThrottle
+Implement a hook that throttles a value
+
+Camel Case Keys
+Implement a function to convert all the keys in an object to camel case
+
+Compact II
+Implement a function that returns an object with all falsey values removed
+
+Conforms To
+Implement a function that checks if object conforms to source
+
+Curry II
+Implement a function that transforms a function that takes multiple arguments into a function that can be repeatedly called with any number of arguments
+
+Debounce II
+Implement a debounce function that comes with a cancel method to cancel delayed invocations and a flush method to immediately invoke them
+
+Event Emitter II
+Implement a class that can subscribe to and emit events that trigger attached callback functions. Subscription objects are returned and can unsubscribe itself
+
+getElementsByTagName
+Implement a function to get all DOM elements that match a tag
+
+Identical DOM Trees
+Implement a function to determine if two DOM trees are the same
+
+jQuery Class Manipulation
+Implement a set of jQuery-like functions that manipulates classes on a DOM element
+
+Map Async
+Implement a function that maps an array of items with an asynchronous mapping function
+
+Promise.allSettled
+Implement the Promise.allSettled() function that resolves to an array of outcomes when all the input elements are either resolved or rejected
+
+Resumable Interval
+Implement a function that creates a resumable interval object
+
+Text Search
+Implement a function to highlight text if a searched term appears within it
+
+useIdle
+Implement a hook that detects user inactivity
+
+Deep Map
+Implement a function to recursively transform values
+
+Text Search II
+Implement a function to highlight text if searched terms appear within it
+
+Deep Merge
+Implement a function that merges two objects together
+
+Memoize II
+Implement a function that returns a memoized version of a function which accepts any number of arguments
+

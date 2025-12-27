@@ -1,0 +1,78 @@
+> What videos of academic comeback
+
+
+> implement the following
+ - myExtends
+ - new
+
+> read rxjs
+ - industry standard usecases
+ - when to use ?
+ - ideal usecases
+
+> Build a rate limiter
+
+> understand proto and other crucial concepts
+
+
+> Real industry usecase for rxjs
+ - what
+ - when
+ - how
+ - close to industry examples
+
+> What is stress testing
+
+> How to write your own event loop
+
+> How to take heap snapshots
+
+> Popover
+ - Design System
+ - How to make it antd
+ - props to accept
+
+> Upload
+
+> Portal
+ - What
+ - Why
+ - When
+ - How
+> How does okta works
+> How does udemy blocks recording or taking ss. results black screen
+> What is Authorization header
+> When to use authorization header
+> What does bearer means , when to use bearer ?
+> JWT
+  - Theory
+  - Practical
+> Implement exponential backoff
+> 1 DSA Question
+> 1 DSA Question
+> ✔1 BFF Question
+> ✔1 BFF Question
+> 1 DSA Question
+> 1 DSA Question
+> ✔1 BFF Question
+> ✔1 BFF Question
+
+> Lodash Implement Keyby
+> Lodash Implement groupby
+> Lodash implement once
+> Lodash implement omit
+> Lodash implement uniqBy
+> Lodash implement memoize
+> Lodash implement intersection
+> Lodash implement union
+
+> Start on unit testing
+
+
+> Learn what is partial hydration
+> Learn how to build a Single Page Application Framework
+> Microservices
+ - service discovery
+ - https://www.geeksforgeeks.org/system-design/microservices/
+
+> What is island architecture ?

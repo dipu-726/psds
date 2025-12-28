@@ -1,9 +1,27 @@
-> What videos of academic comeback
+> Learn about symbol
 
+
+> revise the Object.__proto__
+> revise the Function.prototype
+ - Object.setPrototypeOf
+ - Object.getPrototypeOf
+
+
+Weekday stop the job search
+uplers stop the job search 
+
+
+> Tokens
+> Refresh tokens
+> Pass keys in chrome browers
+> Other misc fields
+ - in application tab of chrom dev tools
+
+> What videos of academic comeback
 
 > implement the following
  - myExtends
- - new
+ - new (✔)
 
 > read rxjs
  - industry standard usecases
@@ -56,6 +74,8 @@
 > 1 DSA Question
 > ✔1 BFF Question
 > ✔1 BFF Question
+> ✔1 BFF Question
+> ✔1 BFF Question
 
 > Lodash Implement Keyby
 > Lodash Implement groupby
@@ -65,6 +85,16 @@
 > Lodash implement memoize
 > Lodash implement intersection
 > Lodash implement union
+> Lodash implement difference
+> Lodash implement debounce
+> Lodash implement throttle
+> Lodash implement pick
+> Lodash implement flow (aka pipe)
+> Lodash implement partial
+> Lodash implement curry
+> Lodash implement orderBy
+> Lodash implement isEqual
+
 
 > Start on unit testing
 

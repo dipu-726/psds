@@ -1,3 +1,5 @@
+> How to build a file watcher
+
 > Learn about symbol
 
 
@@ -78,7 +80,7 @@ uplers stop the job search
 > ✔1 BFF Question
 
 > Lodash Implement Keyby
-> Lodash Implement groupby
+> Lodash Implement groupby ✔
 > Lodash implement once
 > Lodash implement omit
 > Lodash implement uniqBy

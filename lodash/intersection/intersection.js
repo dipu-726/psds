@@ -5,7 +5,7 @@
 // using SameValueZero for equality comparisons. 
 // The order and references of result values are determined by the first array.
 
-const intersection = (arr1, arr2K) => {
+const intersection = (arr1, arr2) => {
 	if(!Array.isArray(arr1)) {
 		throw new TypeError("Expected array but recieved ", arr1, " as ",typeof arr1);
 	}
@@ -16,7 +16,7 @@ const intersection = (arr1, arr2K) => {
 
 	const arrSet = new Set(arr2);
 	const seen = new Set();
-1
+
 	const result = [];
 
 	arr1.forEach(item => {

@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert';
 import intersection from './intersection.js'; // Your 2-array intersection implementation
 
-test('Intersection function (only for 2 arrays)', async (t) => {
+test('intersection', async (t) => {
   // Basic common elements test
   await t.test('Basic common elements', () => {
     const result = intersection([1, 2, 3], [2, 3, 4]);

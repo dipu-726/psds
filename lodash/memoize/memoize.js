@@ -1,3 +1,20 @@
+
+  // function normalize(value) {
+  //   if (value === null || typeof value !== 'object') return value;
+
+  //   if (Array.isArray(value)) {
+  //     return value.map(normalize);
+  //   }
+
+  //   // For objects, sort keys and normalize values
+  //   const sortedKeys = Object.keys(value).sort();
+  //   const normalizedObj = {};
+  //   for (const key of sortedKeys) {
+  //     normalizedObj[key] = normalize(value[key]);
+  //   }
+  //   return normalizedObj;
+  // }
+
 /*
 	Problems to consider
 

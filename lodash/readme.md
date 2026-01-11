@@ -54,3 +54,9 @@
 	 	- for primitives, it does === check.
 - assert.nonDeepStrictEqual
 	 - passes if they are not equal
+
+
+
+### Cache Eviction Strategy
+ - LRU
+ - LFU
